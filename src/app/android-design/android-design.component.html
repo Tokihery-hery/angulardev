@@ -1,0 +1,33 @@
+
+<div class="android">
+    <div class="coque">
+        <div class="border">
+            <div class="date" *ngIf="prete">
+                {{heur}}:{{minute}}:{{second}}
+            </div>
+            <div class="cover">
+                <div class="header">
+                    <div class="micro"> </div>
+                    <div class="camera_face"></div>
+                </div>
+                <div class="wifi" *ngIf="prete"> <span class="chappeau"></span></div>
+                <div class="baterie" *ngIf="prete">100%</div>
+                <div class="ecran">
+                    <div class="demarrage" *ngIf="!ok">
+                            <p>Démarrage d'IPHONE ...</p>                                           
+                          <mat-spinner ></mat-spinner>
+                    </div>
+                    <div class="chargement" *ngIf="!prete && ok">                      
+                        <p>Veuillez patiente, Chargement des donnéés ...</p>                        
+                    </div>
+                  
+                    <div class="body" *ngIf="prete">
+                        <div class="container">
+                            <div>
+                                 <router-outlet></router-outlet>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>

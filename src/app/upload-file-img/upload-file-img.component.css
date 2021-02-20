@@ -1,0 +1,27 @@
+.pick-image {
+    padding: 10px;
+    background-color: rgba(150, 220, 255, 0.7);
+    width: 100px;
+  }
+  .pick-image:hover {
+    cursor: pointer;
+    background-color: rgba(150, 220, 255, 0.9);
+  }
+
+
+  /* input[type="file"] {
+    visibility: hidden;
+    display: none;
+  } */
+
+
+  .image-preview {
+    height: 200px;
+    margin: 0;
+    padding: 0;
+  }
+  .image-preview img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }

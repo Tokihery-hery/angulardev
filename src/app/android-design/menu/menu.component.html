@@ -1,0 +1,38 @@
+<div class="menu_start">
+    <div class="header_menu" [ngClass]="{disparu: iShow===false}">
+        <input type="search" name=" gotoSearchInGoogle" placeholder="Search Google" *ngIf="iShow" (keyup)="searchGoogle()" [(ngModel)]="gotoSearchInGoogle">
+    </div>
+    <button class="body_menu" mat-button (click)="alertOk()">
+            <div class="datetime" *ngIf="iShow && !iSearch">
+                {{aujourdhuit | date}}
+                <p><img src="../../../assets/image/location-white.png" alt=""> Antananarivo </p>
+            </div>
+        <div class="container_menu">
+            <div class="menu-menu" *ngIf="paramShow && !iSearch">
+                <div class="header-menu-menu">
+                    <h1>Menu - menu</h1>
+                </div>
+                <hr>
+                <div class="body-menu-menu">
+                    <button mat-raised-button (click)="changerFond()">Changer fond d'ecran</button>
+                    <button mat-raised-button (click)="paramAfficher()">Parametre d'affichage</button>
+                </div>
+            </div>
+            <div *ngIf="iSearch" >
+                <div *ngFor="let res of resulatDat">
+                    <app-search-google (lenClose)="lenClose($event)" [resultatData]="res"></app-search-google>
+                </div>
+                     
+            </div>
+            <div *ngIf="iShowList">
+                <app-apk-list (listApkNo)="listApkNo($event)"></app-apk-list>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </button>
+    <div class="footer_menu">
+        <button mat-button (click)='goTosms()'><img src="../../../assets/image/18-envelope.png" alt=""></button>
+        <button mat-button (click)="menu()"><img src="../../../assets/image/grid-white.png" alt=""></button>
+        <button mat-button (click)="back()"><img src="../../../assets/image/back-white.png" alt=""></button>
+    </div>
+</div>

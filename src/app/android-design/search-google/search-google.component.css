@@ -1,0 +1,89 @@
+.resultat-google{
+    width: 335PX;
+    background: rgb(255, 255, 255);
+    height: -webkit-max-content;
+    height: max-content;
+    margin: auto;
+    position: inherit;
+    margin-top: -93px;
+    margin-left: -12px;
+    white-space: break-spaces;
+    overflow-wrap: break-word;
+}
+
+.resultat-show{
+    padding: 12px;
+    max-height: 564px;
+    overflow: auto;
+}
+.every-resultat{
+    display: flex;
+    background: rgb(255, 255, 255);
+    line-height: 1;
+    border-radius: 13px;
+    margin-bottom: 12px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 2px 0px ;
+    min-height: 56px;
+}
+.every-resultat .image-resultat{
+    height: inherit;
+    width: 45px;
+    border-radius: 50%;
+    position: relative;
+
+}
+.contenu-resultat{
+    text-align: initial;
+    margin: auto 11px;
+    width: 147px;
+    position: relative;
+}
+
+.contenu-resultat h1{
+    margin: auto !important;
+    color: rgb(53, 97, 219);
+    font-size: inherit;
+    font-weight: bold;
+}
+.every-resultat .image-resultat img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    position: relative;
+    margin: 7px 5px;
+}
+.action-resultat button{
+    height: 38px;
+    justify-content: end;
+    /* position: absolute; */
+    width: min-content;
+    right: -49px;
+
+}
+.action-resultat img{
+    height: 15px;
+    width: 15px;
+}
+P{
+    margin: 0px !important;
+}
+.contenu-resultat small{
+font-size: 9px;
+vertical-align: middle;
+margin-top: 0px;
+font-weight: bold;
+}
+.contenu-resultat small span img{
+    height: 10px;
+    width: auto;
+    vertical-align: middle;
+
+}
+.awaiting p{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contenu-resultat p{
+    font-size:12px;
+}

@@ -1,0 +1,36 @@
+<p>crudmysql by tokihery</p>
+<div class="container">
+    <form #myForm="ngForm">
+        <input type="text" name="name" class="form-control" [(ngModel)]="objectUser.name">
+        <input type="text" name="lastname" class="form-control" [(ngModel)]="objectUser.lastname">
+        <input type="text" name="mail" class="form-control" [(ngModel)]="objectUser.mail">
+        <button class="btn btn-success" *ngIf="!isEdit" (click)="ajouterNewUser(myForm.value)">Enregistrer</button>
+        <button class="btn btn-info" *ngIf="isEdit" (click)="updateUser(myForm.value)">Update</button>
+
+    </form>
+    <table class="table">
+        <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">lastname</th>
+            <th scope="col">mail</th>
+            <th scope="col">date</th>
+            <th scope="col">edit</th>
+            <th scope="col">delete</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of allUser">
+                <td>{{user.row.id}}</td>
+                <td>{{user.row.name}}</td>
+                <td>{{user.row.lastname}}</td>
+                <td>{{user.row.mail}}</td>
+                <td>{{user.row.date}}</td>
+                <td><button class="btn btn-success" (click) ="editUser(user.row)">Edit</button></td>
+                <td><button class="btn btn-danger" (click)="deleteUser(user.row)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="message" *ngIf="success != ''">
+        <h1>{{success}}</h1>
+    </div>
+</div>

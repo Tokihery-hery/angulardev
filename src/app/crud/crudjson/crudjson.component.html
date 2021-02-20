@@ -1,0 +1,30 @@
+<p>crudjson by tokihery</p>
+<div class="container">
+    <form #myForm="ngForm">
+        <input type="text" name="email" class="form-control" [(ngModel)]="objectUser.email">
+        <input type="password" name="password" class="form-control" [(ngModel)]="objectUser.password">
+        <button class="btn btn-success" *ngIf="!isEdit" (click)="addUser(myForm.value)">Enregistrer</button>
+        <button class="btn btn-info" *ngIf="isEdit" (click)="updateUser(myForm.value)">Update</button>
+
+    </form>
+    <table class="table">
+        <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Password</th>
+            <th scope="col">edit</th>
+            <th scope="col">delete</th>
+
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of allUser">
+                <td>{{user.id}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.password}}</td>
+                <td><button class="btn btn-success" (click) ="editUser(user)">Edit</button></td>
+                <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

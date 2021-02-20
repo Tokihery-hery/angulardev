@@ -1,0 +1,132 @@
+.sms{
+    background: inherit;
+    height: 100%;
+    position: relative;
+    width: 314px;
+
+}
+.container-sms{
+    height: 644px;
+    background: inherit;
+    width: 344px;
+    text-align: center;
+    white-space: normal;
+    position: relative;
+    margin-left: -17px;
+    margin-top: -122px;
+    border-radius: 12px;
+}
+.header-sms{
+    height: 50px;
+    background: rgb(113, 96, 129);
+    display: flex;
+}
+.header-sms img{
+    height: 45px;
+    border-radius: 50%;
+    width: 45px;
+    margin: auto 12px;
+}
+
+.plus-sms{
+    display: flex; 
+    position: relative;
+}
+.plus-sms button{
+    height: 34px;
+    width: 34px;
+    margin: auto;
+    padding: 5px;   
+}
+.plus-sms img{
+    height: 100%;
+    width: 100%;
+    margin: -16px;
+    padding: 0;
+    position: absolute
+}
+.info-sms-envoyeur{
+    float: none;
+    line-height: 1;
+    margin: auto 52px;
+}
+.info-sms-envoyeur h2{
+    margin: auto !important;
+}
+.body-sms{
+    padding: 0 12px;
+    overflow: auto;
+    position: relative;
+    height: 537px;
+}
+.body-sms p{
+    padding: 12px;
+    margin-top: 3px;
+    text-justify: auto;
+}
+.body-sms .sender{
+     float: left; 
+     line-height: 2;
+     max-width: 249px;
+}
+.body-sms .sender p{
+    border-radius: 0px 23px 23px 23px;
+    background: rgba(255, 255, 255);
+}
+.body-sms .receiver p{
+    border-radius: 23px 23px 0px 23px;
+    background: rgba(147, 162, 200);
+
+}
+.body-sms .receiver{
+  float: right;
+  line-height: 2;
+}
+.sender small{
+    left: 19px;
+}
+.receiver small{
+    right: 19px;
+}
+.sender small, .receiver small{
+    POSITION: absolute;
+    margin-top: -11px;
+}
+.input-sms{
+    height: 45px;
+    width: auto;
+    display: inline-flex;
+    padding: 6PX 0px 0PX 2px;
+}
+.input-sms input{
+    height: 100%;
+    width: 226px;
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+}
+.input-sms input:focus{
+    box-shadow: rgb(138, 82, 190) 0 0 2px 2px ;
+}
+.input-sms button{
+    height: 100%;
+    width: 45px;
+    border-radius: 0px 10px 10px 0px;
+    background: rgb(119, 144, 226);
+}
+.new-sms img{
+    height: inherit;
+    width: inherit;
+    display: flex;
+    vertical-align: middle;
+    margin: 4px 15px;
+}
+.new-sms{
+    position: absolute;
+}
+.new-sms button{
+    position: absolute;
+    left: 288px;
+    bottom: 75px;
+}

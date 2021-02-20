@@ -1,0 +1,62 @@
+<div class="header_container">
+    <div class="title">
+       <div>
+        <button mat-button (click)="retour()"><img src="../../../assets/image/arrow-l-white.png" alt=""></button>
+       </div>
+        <div>
+            <h5>L'amours du nature</h5>
+        </div>
+        <div>
+            <mat-button-toggle color='green' class="matbutton" #toggleBtn> <img src="../../../assets/image/bullets-white.png" alt=""> </mat-button-toggle>
+        </div>
+    </div>
+    <div *ngIf="toggleBtn.checked">
+        <div class="menu">
+            <div class="body_menu">
+                <div class="img_pdp">
+                    <img src="../../assets/image/tokihery1.jpg" alt="">
+                    <p>Tokihery Nambintsoa</p>
+                </div>
+                <div class="">
+                    <mat-nav-list>
+                        <a  mat-list-item>A propos</a>
+                        <a  mat-list-item>A propos</a>
+                        <a  mat-list-item>A propos</a>
+                        <a  mat-list-item>A propos</a>
+                        <a  mat-list-item>A propos</a>
+                        <a  mat-list-item>A propos</a>
+                    </mat-nav-list>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar" [ngClass]="{opacity: toggleBtn.checked === true}">
+        <ul>
+            <li [ngClass]="{active: i ===0}" class="pro" (click)="navirePoint(0)" mat-raised-button><a  >Alimentation</a></li>
+            <li [ngClass]="{active: i ===1}" (click)="navirePoint(1)" mat-raised-button><a  >Voyages</a></li>
+            <li class="hack" [ngClass]="{active: i ===2}" (click)="navirePoint(2)" mat-raised-button><a  >Piquinique</a></li>
+        </ul>
+    </div>
+    <div class="msg">
+        <button mat-fab>Msg</button>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<div class="footer" [ngClass]="{opacity: toggleBtn.checked === true}">
+    <div class="button">
+        <div class="prev">
+            <button mat-button [disabled]="disabled" (click)="navigation(-1)">
+                Skip
+            </button>
+        </div>
+        <div class="navigation">
+            <span [ngClass]="{point1: i ===0}" (click)="navirePoint(0)"></span>
+            <span [ngClass]="{point1: i ===1}" (click)="navirePoint(1)"></span>
+            <span [ngClass]="{point1: i ===2}" (click)="navirePoint(2)"></span>
+        </div>
+        <div class="next">
+            <button mat-button (click)="navigation(1)">Next</button>
+        </div>
+    </div>
+</div>
