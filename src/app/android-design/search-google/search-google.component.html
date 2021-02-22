@@ -13,18 +13,18 @@
             <div *ngFor="let res of resultat">
                 <div class="every-resultat" id="{{res.id}}">
                     <div class="image-resultat">
-                        <img src="{{res.pdp}}" alt="">
+                        <img src="http://localhost/{{res.avatar}}" alt="">
                     </div>
                     <div class="contenu-resultat">
                         <h1>{{res.name}}</h1>
                         <p>{{res.description}}</p>
                         <small>
                             <span><img src="../../../assets/image/location-black.png" alt=""></span>
-                            {{res.ville}}
+                            {{res.lieu}}
                         </small>
                     </div>
                     <div class="action-resultat">
-                        <button mat-button (click)="close(res.id)"><img src="../../../assets/image/no.png"
+                        <button mat-button (click)="close(res._id)"><img src="../../../assets/image/no.png"
                                 alt=""></button>
                     </div>
 

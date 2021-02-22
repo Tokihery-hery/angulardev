@@ -80,7 +80,7 @@ export class MenuComponent implements OnInit {
         }else{
           this.len = array[0].toString().split(',').length
         }
-        this.resulatDat = [{datas:this.data, i:this.iSearch, lens:this.len}]
+        this.resulatDat = [{datas:this.data.resultat, i:this.iSearch, lens:this.len}]
       })
     }else{
       this.iSearch = false
