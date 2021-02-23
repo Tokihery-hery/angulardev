@@ -13,7 +13,7 @@ import { Item } from '../upload-file-img/model';
 export class EmoraServiceService {
   private items: Item[] = [];
   private itemsUpdated = new Subject<{ items: Item[], count: number }>();
-  baseUrl = "http://localhost/api"
+  baseUrl = "https://tkjsonserver.herokuapp.com/api"
   constructor(private __http: HttpClient, private route: Router) { }
 
   newVendeur(objVendeur: any) {
