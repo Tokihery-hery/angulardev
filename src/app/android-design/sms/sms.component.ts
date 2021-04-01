@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sms.component.css']
 })
 export class SmsComponent implements OnInit {
-
+  newSms:boolean = false
+  tel = "0344999128"
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  alert(){
+    this.newSms =! this.newSms
+  }
 }

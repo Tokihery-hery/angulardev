@@ -2,7 +2,7 @@
     <div class="resultat-google">
         <div class="header-resultat">
             <div *ngIf="!awaiting">
-                {{len}} Resulat{{genre}} found{{genre}}
+                {{len}} <span *ngIf="len>0"> resultat{{genre}}</span> found{{genre}}
             </div>
             <div class="awaiting" *ngIf="awaiting">
                 <p>Awaiting...</p>
@@ -10,10 +10,11 @@
         </div>
         <hr>
         <div class="resultat-show">
+           <div *ngIf="yes">
             <div *ngFor="let res of resultat">
-                <div class="every-resultat" id="{{res.id}}">
+                <div class="every-resultat" id="{{res._id}}">
                     <div class="image-resultat">
-                        <img src="https://tkjsonserver.herokuapp.com/{{res.avatar}}" alt="">
+                        <img src="http://localhost:8090/{{res.avatar}}" alt="">
                     </div>
                     <div class="contenu-resultat">
                         <h1>{{res.name}}</h1>
@@ -30,6 +31,7 @@
 
                 </div>
             </div>
+           </div>
 
         </div>
     </div>

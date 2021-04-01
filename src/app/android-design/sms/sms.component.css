@@ -98,6 +98,29 @@
     display: inline-flex;
     padding: 6PX 0px 0PX 2px;
 }
+.input-tel {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 6PX 0px 0PX 2px;
+}
+.input-tel label{
+    color: black;
+    height: 100%;
+    background: white;
+    border-radius: 10px 0px 0px 10px;
+    padding: 0px 12px;
+    font-weight: bold;
+}
+.input-tel input{
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+}
 .input-sms input{
     height: 100%;
     width: 226px;
@@ -106,6 +129,7 @@
     outline: none;
     padding: 0px 10px;
 }
+
 .input-sms input:focus{
     box-shadow: rgb(138, 82, 190) 0 0 2px 2px ;
 }

@@ -5,7 +5,8 @@ import { EmoraServiceService } from 'src/app/services/emora-service.service';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
+  providers:[EmoraServiceService]
 })
 export class MenuComponent implements OnInit {
   aujourdhuit:any
