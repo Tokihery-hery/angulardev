@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 
 const path = require('path')
-
+const port = process.env.PORT || '4200';
 
 app.use(express.static(__dirname+'/dist/angular'))
 
@@ -12,6 +12,6 @@ app.get('/*', (req, res)=>{
 
 })
 
-app.listen(proccess.env.PORT, ()=>{
+app.listen(port, ()=>{
 	console.log("started")
 })
